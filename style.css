@@ -32,7 +32,11 @@ body, html {
 
 .left-panel {
     flex-basis: 50%;
-    background-color: var(--white);
+    background-image: url('images/imagen-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
 }
 
 .right-panel {
@@ -202,22 +206,28 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
     .left-panel {
-        display: none;
+        flex-basis: auto;
+        height: 250px;
     }
     .right-panel {
-        flex-basis: 100%;
+        flex-basis: auto;
+        align-items: flex-start;
+        padding: 2rem 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     .right-panel {
-        padding: 0; 
-        align-items: center;
+        padding: 1.5rem 1rem;
     }
     .login-container{
         max-width: 100%;
-        padding: 1.5rem;
+        padding: 0;
     }
     .login-form {
         box-shadow: none;
